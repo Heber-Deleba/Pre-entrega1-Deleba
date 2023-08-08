@@ -112,10 +112,11 @@ header h1 span{
 }
 
 
-.navbar-nav {
-    display: flex;
-    align-items: end;
-}
+
+    
+    
+
+
 
 
 
@@ -448,6 +449,13 @@ footer i:hover {
     .whatsapp {
         display: none;
     }
+
+    .copy{
+        color: white;
+        font-size: 10px;
+        display: flex;
+        justify-content: start;
+    }
 }
 
 @media screen and (max-width:650px) {
@@ -511,6 +519,7 @@ footer i:hover {
         font-size: 30px;
     }
 
+    
 
 }
 
