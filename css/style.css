@@ -39,6 +39,8 @@
 
 
 
+
+
 /*!--------MAIN--------*/
 .hero {
     font-family: 'Barlow', sans-serif;
@@ -265,19 +267,14 @@ form {
 
     flex-direction: column;
     align-items: center;
+    padding: 20px;
     font-family: 'Barlow', sans-serif;
-    padding: 40px;
+    
 }
 
-.col-md-3 {
 
-    width: 33%;
-}
 
-.col-12 {
-    text-align: center;
-    width: 30%;
-}
+
 
 
 
@@ -362,6 +359,11 @@ footer i:hover {
 
     }
 
+    .contacto{
+        
+        flex-direction: column;
+    }
+
     .whatsapp {
         display: none;
     }
@@ -369,18 +371,42 @@ footer i:hover {
     .copy{
         color: white;
         font-size: 10px;
-        display: flex;
-        justify-content: start;
+        
     }
+    
 }
+
+
+
+
+
 
 @media screen and (max-width:650px) {
 
-    
+    footer{
+        
+        justify-content: center;
+    }
 
     footer h2 {
         font-size: 40px;
+        display: flex;
+        justify-content: center;
     }
+
+    footer ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer div{
+        display: flex;
+        justify-content: center;
+    }
+
+    
 
     .hero {
         font-size: 30px;
@@ -422,7 +448,20 @@ footer i:hover {
         font-size: 30px;
     }
 
-    
+    section p{
+        font-size: 5px;
+    }
+    section h4{
+        font-size: 10px;
+    }
+
+    .card-text{
+        font-size: 10px;
+    }
+
+    .card-tittle{
+        font-size: 15px;
+    }
 
 }
 
