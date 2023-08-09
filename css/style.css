@@ -272,6 +272,10 @@ form {
     
 }
 
+.row{
+    margin-right: 0px;
+}
+
 
 
 
@@ -294,6 +298,7 @@ footer h2 {
     font-weight: 900;
     font-style: italic;
     margin-left: 35px;
+    padding-top: 15px;
 
 }
 
@@ -389,6 +394,7 @@ footer i:hover {
     }
 
     footer h2 {
+        margin-left: 10px;
         font-size: 40px;
         display: flex;
         justify-content: center;
