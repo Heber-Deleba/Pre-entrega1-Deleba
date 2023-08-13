@@ -1,0 +1,71 @@
+/*!-----TIPOGRAFIA-----*/
+@import url("https://fonts.googleapis.com/css2? family= Barlow:ital,wght@1,500 & family= Gloock & display=swap");
+/*!------RESET-------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+header .navbar .container-fluid .navbar-brand {
+    color: black;
+    border-color: white;
+    font-size: 50px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    margin: 10px; }
+    header .navbar .container-fluid .navbar-brand span {
+    color: red; }
+
+.hero h2 {
+    font-family: 'Barlow', sans-serif;
+    font-style: italic;
+    color: white;
+    font-weight: 400;
+    font-size: 60px;
+    background-image: url(../img/fondo-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px; }
+
+footer {
+    background-color: #0b0b0b; }
+    footer h2 {
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    margin-left: 35px;
+    padding-top: 15px; }
+    footer h2 span {
+        color: #fd0000; }
+    footer ul {
+    list-style: none;
+    margin: 10px; }
+    footer ul li a {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        color: white; }
+        footer ul li a:hover {
+        color: #c70101; }
+    footer div{
+    margin-left: 35px; }
+    footer div a i {
+        color: white;
+        font-size: 50px;
+        padding: 5px; }
+        footer div a i:hover {
+        color: #c70101; }
+    footer .copy p {
+    color: white;
+    display: flex;
+    justify-content: center; }

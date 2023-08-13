@@ -42,7 +42,7 @@
 
 
 /*!--------MAIN--------*/
-.hero {
+.hero h2{
     font-family: 'Barlow', sans-serif;
     font-style: italic;
     color: rgb(255, 255, 255);
@@ -342,7 +342,7 @@ footer i:hover {
 
 
 
-.copy {
+footer .copy p{
     color: white;
     display: flex;
     justify-content: center;
