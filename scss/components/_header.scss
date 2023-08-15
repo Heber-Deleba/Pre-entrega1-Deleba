@@ -2,15 +2,15 @@ header{
     .navbar{
         .container-fluid{
             .navbar-brand{
-                color: rgb(0, 0, 0);
-                border-color: rgb(255, 255, 255);
+                color: $color-primario;
+                border-color:white;
                 font-size: 50px;
                 font-family: 'Barlow', sans-serif;
                 font-weight: 900;
                 font-style: italic;
                 margin: 10px;
                 span{
-                    color: red;
+                    color:red;
                 }
             }
         }

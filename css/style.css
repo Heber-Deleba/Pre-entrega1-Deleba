@@ -100,14 +100,13 @@
 }
 
 .camisetas div h3 {
-    font-weight: 800;
-    font-size: 20px;
-    padding: 0px;
-    text-align: center;
+    margin-top: 10px;
+    width: 200px;
+    height: 300px;
 
 }
 
-.camisetas div a {
+.camisetas div .boton{
     text-decoration: none;
     color: black;
     background-color: white;
@@ -115,20 +114,15 @@
     font-weight: bolder;
     margin: 10px;
     padding: 5px;
+    text-align: center;
 }
 
 div h4 {
     margin: 10px;
     color: rgb(253, 0, 0);
-
+    padding: 10px;
 }
 
-.boton {
-
-
-    text-align: center;
-
-}
 
 .boton:hover {
     background-color: #e4e4e4;
@@ -373,7 +367,7 @@ footer .copy p{
         display: none;
     }
 
-    .copy{
+    .copy p{
         color: white;
         font-size: 10px;
         
@@ -414,7 +408,7 @@ footer .copy p{
 
     
 
-    .hero {
+    .hero h2{
         font-size: 30px;
     }
 
@@ -473,7 +467,7 @@ footer .copy p{
 
 
 @media screen and (max-width:350px) {
-    .hero {
+    .hero h2 {
         font-size: 20px;
         font-weight: 500;
     }

@@ -1,44 +1,218 @@
+/**----variables-----**/
+/**-----listas------**/
+/*---mapas----*/
 /*!-----TIPOGRAFIA-----*/
 @import url("https://fonts.googleapis.com/css2? family= Barlow:ital,wght@1,500 & family= Gloock & display=swap");
 /*!------RESET-------*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 header .navbar .container-fluid .navbar-brand {
-    color: black;
-    border-color: white;
-    font-size: 50px;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    margin: 10px; }
-    header .navbar .container-fluid .navbar-brand span {
+  color: black;
+  border-color: white;
+  font-size: 50px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  margin: 10px; }
+  header .navbar .container-fluid .navbar-brand span {
     color: red; }
 
 .hero h2 {
-    font-family: 'Barlow', sans-serif;
-    font-style: italic;
-    color: white;
-    font-weight: 400;
-    font-size: 60px;
-    background-image: url(../img/fondo-hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 60vh;
+  font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  color: white;
+  font-weight: 400;
+  font-size: 60px;
+  background-image: url(../img/fondo-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px; }
+
+.camisetas h2 {
+  font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0px;
+  background-color: #f3f3f3; }
+
+.camisetas div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; }
+  .camisetas div div {
+    width: 300px;
+    height: 450px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px; }
+    background-color: #ffffff;
+    margin: 30px; }
+    .camisetas div div img {
+      margin-top: 10px;
+      width: 200px;
+      height: 300px; }
+    .camisetas div div h3 {
+      font-family: 'Barlow', sans-serif;
+      font-style: italic;
+      text-align: center;
+      margin: 0px;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 10px; }
+    .camisetas div div h4 {
+      margin: 0px;
+      color: #fd0000;
+      width: 100%;
+      padding: 0px; }
+    .camisetas div div .boton {
+      text-decoration: none;
+      color: black;
+      background-color: white;
+      font-size: 20px;
+      font-weight: bolder;
+      margin: 0px;
+      padding: 5px;
+      text-align: center; }
+      .camisetas div div .boton:hover {
+        background-color: #e4e4e4; }
+
+section {
+  color: black;
+  background-color: #ffffff; }
+  section .grid-enlaces {
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 300px;
+    gap: 15px;
+    margin-bottom: 10px; }
+    section .grid-enlaces .grid-item {
+      position: relative; }
+      section .grid-enlaces .grid-item a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      section .grid-enlaces .grid-item h3 {
+        color: #ffffff;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #0b0b0b96;
+        margin: 0px;
+        padding: 0px; }
+
+.whatsapp a img {
+  color: #29b340;
+  font-size: 50px;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  margin-left: 20px; }
+
+section h2 {
+  font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f3f3f3; }
+
+section p {
+  font-family: 'Barlow', sans-serif;
+  margin: 10px 30px;
+  padding: 10px 30px;
+  text-align: center; }
+
+section h3 {
+  font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  margin: 10px;
+  padding: 10px;
+  text-align: center; }
+
+section .contacto {
+  display: flex;
+  align-items: center; }
+  section .contacto .card {
+    margin: 10px; }
+    section .contacto .card .card-body {
+      margin: 5px;
+      padding: 0px;
+      text-align: center; }
+      section .contacto .card .card-body .card-text {
+        text-align: start;
+        margin: 5px;
+        padding: 0px;
+        text-align: center; }
+
+section div h2 {
+  font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f3f3f3; }
+
+section div p {
+  font-family: 'Barlow', sans-serif;
+  margin: 10px 30px;
+  padding: 10px 30px;
+  text-align: center; }
+
+section .row {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Barlow', sans-serif;
+  margin-right: 0px; }
+
+.terminos h2 {
+  font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f3f3f3; }
+
+.terminos p {
+  font-family: 'Barlow', sans-serif;
+  margin: 10px 30px;
+  padding: 10px 30px;
+  text-align: center;
+  text-align: left; }
+
+.politica h2 {
+  font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f3f3f3; }
+
+.politica p {
+  font-family: 'Barlow', sans-serif;
+  margin: 10px 30px;
+  padding: 10px 30px;
+  text-align: center;
+  text-align: left; }
 
 footer {
-    background-color: #0b0b0b; }
-    footer h2 {
-    color: #ffffff;
+  background-color: black; }
+  footer h2 {
+    color: white;
     font-size: 50px;
     font-family: 'Barlow', sans-serif;
     font-weight: 900;
@@ -46,26 +220,87 @@ footer {
     margin-left: 35px;
     padding-top: 15px; }
     footer h2 span {
-        color: #fd0000; }
-    footer ul {
+      color: red; }
+  footer ul {
     list-style: none;
     margin: 10px; }
     footer ul li a {
-        font-family: 'Barlow', sans-serif;
-        font-weight: 600;
-        text-decoration: none;
-        color: white; }
-        footer ul li a:hover {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+      color: white; }
+      footer ul li a:hover {
         color: #c70101; }
-    footer div{
+  footer div {
     margin-left: 35px; }
     footer div a i {
-        color: white;
-        font-size: 50px;
-        padding: 5px; }
-        footer div a i:hover {
+      color: white;
+      font-size: 50px;
+      padding: 5px; }
+      footer div a i:hover {
         color: #c70101; }
-    footer .copy p {
+  footer .copy p {
     color: white;
     display: flex;
     justify-content: center; }
+
+@media screen and (max-width: 970px) {
+  header {
+    position: static; }
+  .hero h2 {
+    font-size: 50px; }
+  .contacto {
+    flex-direction: column; }
+  .whatsapp {
+    display: none; }
+  .copy p {
+    color: white;
+    font-size: 10px; } }
+
+@media screen and (max-width: 650px) {
+  footer {
+    justify-content: center; }
+    footer h2 {
+      margin-left: 10px;
+      font-size: 40px;
+      display: flex;
+      justify-content: center; }
+    footer ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+    footer div {
+      display: flex;
+      justify-content: center; }
+  .hero h2 {
+    font-size: 30px; }
+  section h2 {
+    font-size: 20px; }
+  section p {
+    font-size: 12px; }
+  section h3 {
+    font-size: 15px; }
+  section form {
+    font-size: 10px; }
+  section .grid-enlaces {
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 450px) {
+  header .navbar .container-fluid .navbar-brand {
+    font-size: 30px; }
+  footer h2 {
+    font-size: 30px; }
+  section p {
+    font-size: 5px; }
+  section h4 {
+    font-size: 10px; }
+  .contacto .card .card-body .card-tittle {
+    font-size: 15px; }
+  .contacto .card .card-body .card-text {
+    font-size: 10px; } }
+
+@media screen and (max-width: 350px) {
+  .hero h2 {
+    font-size: 20px;
+    font-weight: 500; } }

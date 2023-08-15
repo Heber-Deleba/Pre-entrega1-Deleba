@@ -1,0 +1,55 @@
+/**----variables-----**/
+
+$color-primario:black;
+$color-secundario:white;
+$color-terciario:red;
+
+/**-----listas------**/
+
+    
+    $colores:
+    black,
+    white,
+    red,
+    #f3f3f3, 
+    #e4e4e4,
+    #29b340, 
+    #0b0b0b96, 
+    #c70101;
+
+    $font-size:
+    5px,
+    10px,
+    12px,
+    15px,
+    20px,
+    30px,
+    40px,
+    50px,
+    60px;
+
+    /*---mapas----*/
+
+    $boton:(
+        ta-boton:center,
+    );
+
+    //-------extends-----//
+        %flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        
+    
+
+    //----mixing----//
+
+    @mixin flex($flex,$justify,$aling){
+        display: $flex;
+        justify-content: $justify;
+        align-items: $aling;
+    }
+
+    

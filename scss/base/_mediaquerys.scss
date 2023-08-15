@@ -1,0 +1,133 @@
+@media screen and (max-width:970px){
+    header{
+        position: static;
+    }
+
+    .hero{
+        h2{
+            font-size: 50px;
+        }
+    }
+
+    .contacto{
+        flex-direction: column;
+    }
+
+    .whatsapp{
+        display: none;
+    }
+
+    .copy{
+        p{
+            color: white;
+            font-size: 10px; 
+        }
+    }
+}
+
+@media screen and (max-width:650px){
+    footer{
+        justify-content: center;
+        h2{
+            margin-left: 10px;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .hero{
+        h2{
+            font-size: 30px;
+        }
+    }
+
+    section{
+        h2{
+            font-size: 20px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+
+    section{
+        h3{
+            font-size: 15px;
+        }
+    }
+
+    section{
+        form{
+            font-size: 10px;
+        }
+    }
+
+    section{
+        .grid-enlaces{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width:450px){
+    header{
+        .navbar{
+            .container-fluid{
+                .navbar-brand{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    footer{
+        h2{
+            font-size: 30px;
+        }
+    }
+
+    section{
+        p{
+            font-size: 5px;
+        }
+    }
+
+    section{
+        h4{
+            font-size: 10px;
+        }
+    }
+
+    .contacto{
+        .card{
+            .card-body{
+                .card-tittle{
+                    font-size: 15px;
+                }
+                .card-text{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:350px){
+    .hero{
+        h2{
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
