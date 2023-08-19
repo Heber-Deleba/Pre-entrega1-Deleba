@@ -29,7 +29,16 @@ $color-terciario:red;
     60px;
 
     /*---mapas----*/
-
+    $boton:(
+        td-boton:none,
+        color-boton:rgb(240, 10, 10),
+        bc-boton:white,
+        fs-boton:20px,
+        fw-boton:bolder,
+        margin-boton:0px,
+        padding-boton:5px,
+        ta-boton:center,
+        );
     
     //-------extends-----//
         %fuente{

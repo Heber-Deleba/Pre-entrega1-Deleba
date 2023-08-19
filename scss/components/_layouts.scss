@@ -53,14 +53,14 @@
                 padding: 0px;
             }
             .boton{
-                text-decoration: none;
-                color: black;
-                background-color: white;
-                font-size: 20px;
-                font-weight: bolder;
-                margin: 0px;
-                padding: 5px;
-                text-align: center;
+                text-decoration:map-get($boton, td-boton);
+                color:map-get($boton, color-boton);
+                background-color:map-get($boton, bc-boton);
+                font-size:map-get($boton, fs-boton);
+                font-weight:map-get($boton, fw-boton);
+                margin:map-get($boton,margin-boton);
+                padding:map-get($boton,padding-boton);
+                text-align:map-get($boton, ta-boton);
                 &:hover{
                     background-color: #e4e4e4;
                 }
