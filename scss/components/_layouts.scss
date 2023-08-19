@@ -1,7 +1,6 @@
 .hero{
-    h2{
-        font-family: 'Barlow', sans-serif;
-        font-style: italic;
+    .hero-titulo{
+        @include flex ( flex, center,center);
         color:$color-secundario;
         font-weight: 400;
         font-size: 60px;
@@ -10,29 +9,22 @@
         background-size: cover;
         width: 100%;
         height: 60vh;
-        text-align: center;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin: 0px;
-    }
+        @extend %fuente;
+        }
 }
 
 .camisetas{
-    h2{
-        font-family: 'Barlow', sans-serif;
-        font-style: italic;
-        text-align: center;
+    .camisetas-titulo{
         background-color: #ffffff;
         padding: 20px;
         margin: 0px;
         background-color: #f3f3f3;
+        @extend %fuente;
     }
-    div{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+    .camisetas-contenedor{
+        @include flex ( flex, space-evenly, center);
         flex-wrap: wrap;
         div{
             width: 300px;
@@ -47,13 +39,11 @@
                 
             }
             h3{
-                font-family: 'Barlow', sans-serif;
-                font-style: italic;
-                text-align: center;
                 margin:0px;
                 font-size: 20px;
                 font-weight: 500;
                 padding: 10px;
+                @extend %fuente;
                 
             }
             h4{
@@ -79,7 +69,7 @@
     }
 }
 
-section{
+.grid-contenedor{
     color: rgb(0, 0, 0);
     background-color: #ffffff;
     .grid-enlaces{
@@ -95,8 +85,8 @@ section{
             a{
                 img{
                     width: 100%;
-                height: 100%;
-                object-fit: cover;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
             h3{
@@ -127,16 +117,14 @@ section{
 }
 
 
-section{
-    h2{
-        font-family: 'Barlow', sans-serif;
-        font-style: italic;
+.conocenos{
+    .conocenos-titulo{
         margin: 10px;
         padding: 10px;
-        text-align: center;
         background-color: #f3f3f3;
+        @extend %fuente;
     }
-    p{
+    .conocenos-parrafo{
         font-family: 'Barlow', sans-serif;
         margin: 10px 30px;
         padding: 10px 30px;
@@ -144,17 +132,15 @@ section{
     }
 }
 
-section{
-    h3{
-        font-family: 'Barlow', sans-serif;
-        font-style: italic;
+.contacto{
+    
+    .contacto-titulo{
         margin: 10px;
         padding: 10px;
-        text-align: center;
+        @extend %fuente;
     }
-    .contacto{
-        display: flex;
-        align-items: center;
+    .contacto-contenedor{
+        @include flex ( flex, center, center);
         .card{
             margin: 10px;
             .card-body{
@@ -174,17 +160,15 @@ section{
 }
 
 
-section{
-    div{
-        h2{
-            font-family: 'Barlow', sans-serif;
-            font-style: italic;
+.registrarse{
+    .registrarse-contenedor{
+        .registrarse-titulo{
             margin: 10px;
             padding: 10px;
-            text-align: center;
             background-color: #f3f3f3; 
+            @extend %fuente;
         }
-        p{
+        .registrarse-parrafo{
             font-family: 'Barlow', sans-serif;
             margin: 10px 30px;
             padding: 10px 30px;
@@ -203,38 +187,34 @@ section{
 }
 
 .terminos{
-    h2{
-        font-family: 'Barlow', sans-serif;
-        font-style: italic;
+    .terminos-titulo{
         margin: 10px;
         padding: 10px;
-        text-align: center;
         background-color: #f3f3f3;
+        @extend %fuente;
     }
-    p{
+    .terminos-parrafo{
         font-family: 'Barlow', sans-serif;
         margin: 10px 30px;
         padding: 10px 30px;
         text-align: center;
-        text-align: left;
+        
     }
 }
 
 .politica{
-    h2{
-        font-family: 'Barlow', sans-serif;
-        font-style: italic;
+    .politica-titulo{
         margin: 10px;
         padding: 10px;
-        text-align: center;
         background-color: #f3f3f3;
+        @extend %fuente;
     }
-    p{
+    .politica-parrafo{
         font-family: 'Barlow', sans-serif;
         margin: 10px 30px;
         padding: 10px 30px;
         text-align: center;
-        text-align: left;
+        
     }
 }
 

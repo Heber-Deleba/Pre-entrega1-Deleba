@@ -30,26 +30,19 @@ $color-terciario:red;
 
     /*---mapas----*/
 
-    $boton:(
-        ta-boton:center,
-    );
-
-    //-------extends-----//
-        %flex{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
     
-        
+    //-------extends-----//
+        %fuente{
+            font-family:'Barlow', sans-serif ;
+            font-style:italic ;
+            text-align: center;
+        }
     
 
     //----mixing----//
 
-    @mixin flex($flex,$justify,$aling){
+    @mixin flex ( $flex, $justify, $aling){
         display: $flex;
         justify-content: $justify;
         align-items: $aling;
     }
-
-    

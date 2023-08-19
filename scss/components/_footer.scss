@@ -22,7 +22,7 @@ footer{
                 text-decoration: none;
                 color:$color-secundario;
                 &:hover{
-                    color:#c70101 ;
+                    color:nth($colores , 8 );
                 }
             }
         }
@@ -44,7 +44,8 @@ footer{
         p{
             color:$color-secundario;
             display: flex;
-            justify-content: center; 
+            justify-content: center;
+            align-items: center;
         }
     }
 }

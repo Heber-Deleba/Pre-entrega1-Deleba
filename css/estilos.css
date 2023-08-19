@@ -1,8 +1,13 @@
 /**----variables-----**/
 /**-----listas------**/
 /*---mapas----*/
-/*!-----TIPOGRAFIA-----*/
 @import url("https://fonts.googleapis.com/css2? family= Barlow:ital,wght@1,500 & family= Gloock & display=swap");
+.hero .hero-titulo, .camisetas .camisetas-titulo, .camisetas .camisetas-contenedor div h3, .conocenos .conocenos-titulo, .contacto .contacto-titulo, .registrarse .registrarse-contenedor .registrarse-titulo, .terminos .terminos-titulo, .politica .politica-titulo {
+  font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  text-align: center; }
+
+/*!-----TIPOGRAFIA-----*/
 /*!------RESET-------*/
 * {
   margin: 0;
@@ -20,9 +25,10 @@ header .navbar .container-fluid .navbar-brand {
   header .navbar .container-fluid .navbar-brand span {
     color: red; }
 
-.hero h2 {
-  font-family: 'Barlow', sans-serif;
-  font-style: italic;
+.hero .hero-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   font-weight: 400;
   font-size: 60px;
@@ -31,51 +37,41 @@ header .navbar .container-fluid .navbar-brand {
   background-size: cover;
   width: 100%;
   height: 60vh;
-  text-align: center;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0px; }
 
-.camisetas h2 {
-  font-family: 'Barlow', sans-serif;
-  font-style: italic;
-  text-align: center;
+.camisetas .camisetas-titulo {
   background-color: #ffffff;
   padding: 20px;
   margin: 0px;
   background-color: #f3f3f3; }
 
-.camisetas div {
+.camisetas .camisetas-contenedor {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap; }
-  .camisetas div div {
+  .camisetas .camisetas-contenedor div {
     width: 300px;
     height: 450px;
     text-align: center;
     background-color: #ffffff;
     margin: 30px; }
-    .camisetas div div img {
+    .camisetas .camisetas-contenedor div img {
       margin-top: 10px;
       width: 200px;
       height: 300px; }
-    .camisetas div div h3 {
-      font-family: 'Barlow', sans-serif;
-      font-style: italic;
-      text-align: center;
+    .camisetas .camisetas-contenedor div h3 {
       margin: 0px;
       font-size: 20px;
       font-weight: 500;
       padding: 10px; }
-    .camisetas div div h4 {
+    .camisetas .camisetas-contenedor div h4 {
       margin: 0px;
       color: #fd0000;
       width: 100%;
       padding: 0px; }
-    .camisetas div div .boton {
+    .camisetas .camisetas-contenedor div .boton {
       text-decoration: none;
       color: black;
       background-color: white;
@@ -84,13 +80,13 @@ header .navbar .container-fluid .navbar-brand {
       margin: 0px;
       padding: 5px;
       text-align: center; }
-      .camisetas div div .boton:hover {
+      .camisetas .camisetas-contenedor div .boton:hover {
         background-color: #e4e4e4; }
 
-section {
+.grid-contenedor {
   color: black;
   background-color: #ffffff; }
-  section .grid-enlaces {
+  .grid-contenedor .grid-enlaces {
     width: 100%;
     margin-top: 10px;
     display: grid;
@@ -98,13 +94,13 @@ section {
     grid-auto-rows: 300px;
     gap: 15px;
     margin-bottom: 10px; }
-    section .grid-enlaces .grid-item {
+    .grid-contenedor .grid-enlaces .grid-item {
       position: relative; }
-      section .grid-enlaces .grid-item a img {
+      .grid-contenedor .grid-enlaces .grid-item a img {
         width: 100%;
         height: 100%;
         object-fit: cover; }
-      section .grid-enlaces .grid-item h3 {
+      .grid-contenedor .grid-enlaces .grid-item h3 {
         color: #ffffff;
         position: absolute;
         bottom: 0;
@@ -122,92 +118,76 @@ section {
   right: 50px;
   margin-left: 20px; }
 
-section h2 {
-  font-family: 'Barlow', sans-serif;
-  font-style: italic;
+.conocenos .conocenos-titulo {
   margin: 10px;
   padding: 10px;
-  text-align: center;
   background-color: #f3f3f3; }
 
-section p {
+.conocenos .conocenos-parrafo {
   font-family: 'Barlow', sans-serif;
   margin: 10px 30px;
   padding: 10px 30px;
   text-align: center; }
 
-section h3 {
-  font-family: 'Barlow', sans-serif;
-  font-style: italic;
+.contacto .contacto-titulo {
   margin: 10px;
-  padding: 10px;
-  text-align: center; }
+  padding: 10px; }
 
-section .contacto {
+.contacto .contacto-contenedor {
   display: flex;
+  justify-content: center;
   align-items: center; }
-  section .contacto .card {
+  .contacto .contacto-contenedor .card {
     margin: 10px; }
-    section .contacto .card .card-body {
+    .contacto .contacto-contenedor .card .card-body {
       margin: 5px;
       padding: 0px;
       text-align: center; }
-      section .contacto .card .card-body .card-text {
+      .contacto .contacto-contenedor .card .card-body .card-text {
         text-align: start;
         margin: 5px;
         padding: 0px;
         text-align: center; }
 
-section div h2 {
-  font-family: 'Barlow', sans-serif;
-  font-style: italic;
+.registrarse .registrarse-contenedor .registrarse-titulo {
   margin: 10px;
   padding: 10px;
-  text-align: center;
   background-color: #f3f3f3; }
 
-section div p {
+.registrarse .registrarse-contenedor .registrarse-parrafo {
   font-family: 'Barlow', sans-serif;
   margin: 10px 30px;
   padding: 10px 30px;
   text-align: center; }
 
-section .row {
+.registrarse .row {
   flex-direction: column;
   align-items: center;
   padding: 20px;
   font-family: 'Barlow', sans-serif;
   margin-right: 0px; }
 
-.terminos h2 {
-  font-family: 'Barlow', sans-serif;
-  font-style: italic;
+.terminos .terminos-titulo {
   margin: 10px;
   padding: 10px;
-  text-align: center;
   background-color: #f3f3f3; }
 
-.terminos p {
+.terminos .terminos-parrafo {
   font-family: 'Barlow', sans-serif;
   margin: 10px 30px;
   padding: 10px 30px;
-  text-align: center;
-  text-align: left; }
+  text-align: center; }
 
-.politica h2 {
-  font-family: 'Barlow', sans-serif;
-  font-style: italic;
+.politica .politica-titulo {
   margin: 10px;
   padding: 10px;
-  text-align: center;
   background-color: #f3f3f3; }
 
-.politica p {
+.politica .politica-parrafo {
   font-family: 'Barlow', sans-serif;
   margin: 10px 30px;
   padding: 10px 30px;
-  text-align: center;
-  text-align: left; }
+  text-align: center; }
 
 footer {
   background-color: black; }
@@ -242,7 +222,8 @@ footer {
   footer .copy p {
     color: white;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
 
 @media screen and (max-width: 970px) {
   header {
