@@ -1,8 +1,8 @@
 footer{
     background-color:$color-primario;
-    h2{
+    .footer-titulo{
         color:$color-secundario;
-        font-size: 50px;
+        font-size:nth($font-size, 8);
         font-family: 'Barlow', sans-serif;
         font-weight: 900;
         font-style: italic;
@@ -12,7 +12,7 @@ footer{
             color:$color-terciario;
         }
     }
-    ul{
+    .footer-lista{
         list-style: none;
         margin: 10px;
         li{
@@ -22,30 +22,29 @@ footer{
                 text-decoration: none;
                 color:$color-secundario;
                 &:hover{
-                    color:nth($colores , 8 );
+                    color:nth($colores , 5 );
                 }
             }
         }
     }
-    div{
+    .footer-redes{
         margin-left: 35px;
         a{
             i{
                 color:$color-secundario;
-                font-size: 50px;
+                font-size:nth($font-size, 8);
                 padding: 5px;
                 &:hover{
-                    color: #c70101;
+                    color:nth($colores, 5);
                 }
             }
         }
     }
     .copy{
-        p{
+        .copy-linea{
+            @include flex ( flex, center,center);
             color:$color-secundario;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            
         }
     }
 }

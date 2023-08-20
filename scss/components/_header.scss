@@ -4,7 +4,7 @@ header{
             .navbar-brand{
                 color: $color-primario;
                 border-color: $color-secundario;
-                font-size: 50px;
+                font-size:nth($font-size, 8);
                 font-family: 'Barlow', sans-serif;
                 font-weight: 900;
                 font-style: italic;

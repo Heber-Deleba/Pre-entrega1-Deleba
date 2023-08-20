@@ -3,7 +3,7 @@
         @include flex ( flex, center,center);
         color:$color-secundario;
         font-weight: 400;
-        font-size: 60px;
+        font-size:nth($font-size, 9);
         background-image: url(../img/fondo-hero.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -17,10 +17,9 @@
 
 .camisetas{
     .camisetas-titulo{
-        background-color: #ffffff;
         padding: 20px;
         margin: 0px;
-        background-color: #f3f3f3;
+        background-color:nth($colores, 1);
         @extend %fuente;
     }
     .camisetas-contenedor{
@@ -30,7 +29,7 @@
             width: 300px;
             height: 450px;
             text-align: center;
-            background-color: #ffffff;
+            background-color:$color-secundario;
             margin: 30px;
             img{
                 margin-top: 10px;
@@ -40,7 +39,7 @@
             }
             h3{
                 margin:0px;
-                font-size: 20px;
+                font-size:nth($font-size, 5);
                 font-weight: 500;
                 padding: 10px;
                 @extend %fuente;
@@ -48,7 +47,7 @@
             }
             h4{
                 margin: 0px;
-                color: rgb(253, 0, 0);
+                color:$color-terciario;
                 width: 100%;
                 padding: 0px;
             }
@@ -62,7 +61,7 @@
                 padding:map-get($boton,padding-boton);
                 text-align:map-get($boton, ta-boton);
                 &:hover{
-                    background-color: #e4e4e4;
+                    background-color: nth($colores, 2);
                 }
             }
         }
@@ -70,8 +69,8 @@
 }
 
 .grid-contenedor{
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
+    color:$color-primario;
+    background-color: $color-secundario;
     .grid-enlaces{
         width: 100%;
         margin-top: 10px;
@@ -90,7 +89,7 @@
                 }
             }
             h3{
-                color: #ffffff;
+                color:$color-secundario;
                 position: absolute;
                 bottom: 0;
                 width: 100%;
@@ -104,14 +103,16 @@
 }
 
 .whatsapp{
-    a{
-        img{
-            color: #29b340;
-            font-size: 50px;
-            position: fixed;
-            bottom: 100px;
-            right: 50px;
-            margin-left: 20px;
+    .whatsapp-logo{
+        a{
+            img{
+                color:nth($colores, 3);
+                font-size:nth($font-size, 8);
+                position: fixed;
+                bottom: 100px;
+                right: 50px;
+                margin-left: 20px;
+            }
         }
     }
 }
@@ -121,7 +122,7 @@
     .conocenos-titulo{
         margin: 10px;
         padding: 10px;
-        background-color: #f3f3f3;
+        background-color:nth($colores, 1);
         @extend %fuente;
     }
     .conocenos-parrafo{
@@ -165,7 +166,7 @@
         .registrarse-titulo{
             margin: 10px;
             padding: 10px;
-            background-color: #f3f3f3; 
+            background-color:nth($colores, 1); 
             @extend %fuente;
         }
         .registrarse-parrafo{
@@ -190,7 +191,7 @@
     .terminos-titulo{
         margin: 10px;
         padding: 10px;
-        background-color: #f3f3f3;
+        background-color:nth($colores, 1);
         @extend %fuente;
     }
     .terminos-parrafo{
@@ -206,7 +207,7 @@
     .politica-titulo{
         margin: 10px;
         padding: 10px;
-        background-color: #f3f3f3;
+        background-color:nth($colores, 1);
         @extend %fuente;
     }
     .politica-parrafo{

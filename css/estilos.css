@@ -41,7 +41,6 @@ header .navbar .container-fluid .navbar-brand {
   margin: 0px; }
 
 .camisetas .camisetas-titulo {
-  background-color: #ffffff;
   padding: 20px;
   margin: 0px;
   background-color: #f3f3f3; }
@@ -55,7 +54,7 @@ header .navbar .container-fluid .navbar-brand {
     width: 300px;
     height: 450px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: white;
     margin: 30px; }
     .camisetas .camisetas-contenedor div img {
       margin-top: 10px;
@@ -68,12 +67,12 @@ header .navbar .container-fluid .navbar-brand {
       padding: 10px; }
     .camisetas .camisetas-contenedor div h4 {
       margin: 0px;
-      color: #fd0000;
+      color: red;
       width: 100%;
       padding: 0px; }
     .camisetas .camisetas-contenedor div .boton {
       text-decoration: none;
-      color: #f00a0a;
+      color: black;
       background-color: white;
       font-size: 20px;
       font-weight: bolder;
@@ -85,7 +84,7 @@ header .navbar .container-fluid .navbar-brand {
 
 .grid-contenedor {
   color: black;
-  background-color: #ffffff; }
+  background-color: white; }
   .grid-contenedor .grid-enlaces {
     width: 100%;
     margin-top: 10px;
@@ -101,7 +100,7 @@ header .navbar .container-fluid .navbar-brand {
         height: 100%;
         object-fit: cover; }
       .grid-contenedor .grid-enlaces .grid-item h3 {
-        color: #ffffff;
+        color: white;
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -110,7 +109,7 @@ header .navbar .container-fluid .navbar-brand {
         margin: 0px;
         padding: 0px; }
 
-.whatsapp a img {
+.whatsapp .whatsapp-logo a img {
   color: #29b340;
   font-size: 50px;
   position: fixed;
@@ -191,7 +190,7 @@ header .navbar .container-fluid .navbar-brand {
 
 footer {
   background-color: black; }
-  footer h2 {
+  footer .footer-titulo {
     color: white;
     font-size: 50px;
     font-family: 'Barlow', sans-serif;
@@ -199,89 +198,88 @@ footer {
     font-style: italic;
     margin-left: 35px;
     padding-top: 15px; }
-    footer h2 span {
+    footer .footer-titulo span {
       color: red; }
-  footer ul {
+  footer .footer-lista {
     list-style: none;
     margin: 10px; }
-    footer ul li a {
+    footer .footer-lista li a {
       font-family: 'Barlow', sans-serif;
       font-weight: 600;
       text-decoration: none;
       color: white; }
-      footer ul li a:hover {
+      footer .footer-lista li a:hover {
         color: #c70101; }
-  footer div {
+  footer .footer-redes {
     margin-left: 35px; }
-    footer div a i {
+    footer .footer-redes a i {
       color: white;
       font-size: 50px;
       padding: 5px; }
-      footer div a i:hover {
+      footer .footer-redes a i:hover {
         color: #c70101; }
-  footer .copy p {
-    color: white;
+  footer .copy .copy-linea {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    color: white; }
 
 @media screen and (max-width: 970px) {
   header {
     position: static; }
-  .hero h2 {
+  .hero .hero-titulo {
     font-size: 50px; }
-  .contacto {
+  .contacto-contenedor {
     flex-direction: column; }
-  .whatsapp {
+  .whatsapp .whatsapp-logo {
     display: none; }
-  .copy p {
+  .copy .copy-linea {
     color: white;
     font-size: 10px; } }
 
 @media screen and (max-width: 650px) {
   footer {
     justify-content: center; }
-    footer h2 {
+    footer .footer-titulo {
       margin-left: 10px;
       font-size: 40px;
       display: flex;
       justify-content: center; }
-    footer ul {
+    footer .footer-lista {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column; }
-    footer div {
+    footer .footer-redes {
       display: flex;
       justify-content: center; }
-  .hero h2 {
-    font-size: 30px; }
-  section h2 {
+  .hero .hero-titulo {
+    font-size: 20px;
+    height: 30vh; }
+  .conocenos .conocenos-titulo {
     font-size: 20px; }
-  section p {
+  .conocenos .conocenos-parrafo {
     font-size: 12px; }
-  section h3 {
+  .contacto .contacto-titulo {
     font-size: 15px; }
-  section form {
+  .registrarse .row {
     font-size: 10px; }
-  section .grid-enlaces {
+  .grid-contenedor .grid-enlaces {
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 450px) {
   header .navbar .container-fluid .navbar-brand {
     font-size: 30px; }
-  footer h2 {
+  .camisetas .camisetas-contenedor div h4 {
+    font-size: 20px; }
+  footer .footer-titulo {
     font-size: 30px; }
-  section p {
-    font-size: 5px; }
-  section h4 {
-    font-size: 10px; }
-  .contacto .card .card-body .card-tittle {
+  .contacto-contenedor .card .card-body .card-tittle {
     font-size: 15px; }
-  .contacto .card .card-body .card-text {
+  .contacto-contenedor .card .card-body .card-text {
     font-size: 10px; } }
 
 @media screen and (max-width: 350px) {
-  .hero h2 {
+  .hero .hero-titulo {
     font-size: 20px;
     font-weight: 500; } }

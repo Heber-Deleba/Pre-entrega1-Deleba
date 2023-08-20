@@ -8,9 +8,6 @@ $color-terciario:red;
 
     
     $colores:
-    black,
-    white,
-    red,
     #f3f3f3, 
     #e4e4e4,
     #29b340, 
@@ -31,7 +28,7 @@ $color-terciario:red;
     /*---mapas----*/
     $boton:(
         td-boton:none,
-        color-boton:rgb(240, 10, 10),
+        color-boton:rgb(0, 0, 0),
         bc-boton:white,
         fs-boton:20px,
         fw-boton:bolder,

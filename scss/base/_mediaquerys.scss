@@ -4,76 +4,81 @@
     }
 
     .hero{
-        h2{
-            font-size: 50px;
+        .hero-titulo{
+            font-size: nth($font-size, 8);
         }
     }
 
-    .contacto{
+    .contacto-contenedor{
         flex-direction: column;
     }
 
     .whatsapp{
-        display: none;
+        .whatsapp-logo{
+            display: none;
+        }
     }
 
     .copy{
-        p{
-            color: white;
-            font-size: 10px; 
+        .copy-linea{
+            color:$color-secundario;
+            font-size:nth($font-size, 2); 
         }
     }
 }
 
 @media screen and (max-width:650px){
+    
+    
     footer{
         justify-content: center;
-        h2{
+        .footer-titulo{
             margin-left: 10px;
             font-size: 40px;
             display: flex;
             justify-content: center;
         }
-        ul{
+        .footer-lista{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
-        div{
+        .footer-redes{
             display: flex;
             justify-content: center;
         }
     }
 
     .hero{
-        h2{
-            font-size: 30px;
+        .hero-titulo{
+            font-size:nth($font-size, 5);
+            height: 30vh;
         }
     }
 
-    section{
-        h2{
-            font-size: 20px;
+    .conocenos{
+        .conocenos-titulo{
+            font-size:nth($font-size, 5);
         }
-        p{
-            font-size: 12px;
-        }
-    }
-
-    section{
-        h3{
-            font-size: 15px;
+        .conocenos-parrafo{
+            font-size:nth($font-size, 3);
         }
     }
 
-    section{
-        form{
-            font-size: 10px;
+    .contacto{
+        .contacto-titulo{
+            font-size:nth($font-size, 4);
         }
     }
 
-    section{
+    .registrarse{
+        .row{
+            font-size:nth($font-size, 2);
+        }
+    }
+
+    .grid-contenedor{
         .grid-enlaces{
             grid-template-columns: 1fr;
         }
@@ -85,38 +90,37 @@
         .navbar{
             .container-fluid{
                 .navbar-brand{
-                    font-size: 30px;
+                    font-size:nth($font-size, 6);
                 }
             }
         }
     }
 
+    .camisetas{
+        .camisetas-contenedor{
+            div{
+                h4{
+                    font-size:nth($font-size, 5);
+                }
+            }
+        }
+    }
     footer{
-        h2{
-            font-size: 30px;
+        .footer-titulo{
+            font-size:nth($font-size, 6);
         }
     }
 
-    section{
-        p{
-            font-size: 5px;
-        }
-    }
+    
 
-    section{
-        h4{
-            font-size: 10px;
-        }
-    }
-
-    .contacto{
+    .contacto-contenedor{
         .card{
             .card-body{
                 .card-tittle{
-                    font-size: 15px;
+                    font-size: nth($font-size, 4);
                 }
                 .card-text{
-                    font-size: 10px;
+                    font-size: nth($font-size, 2);
                 }
             }
         }
@@ -125,8 +129,8 @@
 
 @media screen and (max-width:350px){
     .hero{
-        h2{
-            font-size: 20px;
+        .hero-titulo{
+            font-size:nth($font-size, 5);
             font-weight: 500;
         }
     }
