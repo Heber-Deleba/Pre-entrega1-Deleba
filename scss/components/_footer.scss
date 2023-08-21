@@ -22,7 +22,7 @@ footer{
                     font-weight: 600;
                     text-decoration: none;
                     color:$color-secundario;
-                    transition: 1s;
+                    transition: 0.5s;
                     &:hover{
                         color:nth($colores , 5 );
                     }
@@ -40,7 +40,7 @@ footer{
                         color:$color-secundario;
                         font-size:nth($font-size, 8);
                         padding: 5px;
-                        transition: 1s;
+                        transition: 0.5s;
                         &:hover{
                             color:nth($colores, 5);
                         }
