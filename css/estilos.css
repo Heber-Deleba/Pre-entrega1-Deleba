@@ -32,7 +32,7 @@ header .navbar .container-fluid .navbar-brand {
   color: white;
   font-weight: 400;
   font-size: 60px;
-  background-image: url(../img/fondo-hero.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.326)), url(../img/fondo-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -55,7 +55,11 @@ header .navbar .container-fluid .navbar-brand {
     height: 450px;
     text-align: center;
     background-color: white;
-    margin: 30px; }
+    margin: 30px;
+    transition: 1s; }
+    .camisetas .camisetas-contenedor div:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.073); }
     .camisetas .camisetas-contenedor div img {
       margin-top: 10px;
       width: 200px;
@@ -78,7 +82,8 @@ header .navbar .container-fluid .navbar-brand {
       font-weight: bolder;
       margin: 0px;
       padding: 5px;
-      text-align: center; }
+      text-align: center;
+      transition: 1s; }
       .camisetas .camisetas-contenedor div .boton:hover {
         background-color: #e4e4e4; }
 
@@ -137,7 +142,11 @@ header .navbar .container-fluid .navbar-brand {
   justify-content: center;
   align-items: center; }
   .contacto .contacto-contenedor .card {
-    margin: 10px; }
+    margin: 10px;
+    transition: 1s; }
+    .contacto .contacto-contenedor .card:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.073); }
     .contacto .contacto-contenedor .card .card-body {
       margin: 5px;
       padding: 0px;
@@ -207,7 +216,8 @@ footer {
       font-family: 'Barlow', sans-serif;
       font-weight: 600;
       text-decoration: none;
-      color: white; }
+      color: white;
+      transition: 1s; }
       footer .footer-lista li a:hover {
         color: #c70101; }
   footer .footer-redes {
@@ -215,14 +225,16 @@ footer {
     footer .footer-redes a i {
       color: white;
       font-size: 50px;
-      padding: 5px; }
+      padding: 5px;
+      transition: 1s; }
       footer .footer-redes a i:hover {
         color: #c70101; }
-  footer .copy .copy-linea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white; }
+
+.copy .copy-linea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; }
 
 @media screen and (max-width: 970px) {
   header {

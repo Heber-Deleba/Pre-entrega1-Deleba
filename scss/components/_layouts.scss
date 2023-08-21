@@ -4,7 +4,7 @@
         color:$color-secundario;
         font-weight: 400;
         font-size:nth($font-size, 9);
-        background-image: url(../img/fondo-hero.jpg);
+        background:linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.326)), url(../img/fondo-hero.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -31,6 +31,12 @@
             text-align: center;
             background-color:$color-secundario;
             margin: 30px;
+            transition: 1s;
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: 0px 0px 10px 10px  rgba(0, 0, 0, 0.073);
+                
+            }
             img{
                 margin-top: 10px;
                 width: 200px;
@@ -60,6 +66,7 @@
                 margin:map-get($boton,margin-boton);
                 padding:map-get($boton,padding-boton);
                 text-align:map-get($boton, ta-boton);
+                transition: 1s;
                 &:hover{
                     background-color: nth($colores, 2);
                 }
@@ -81,6 +88,8 @@
         margin-bottom: 10px;
         .grid-item{
             position: relative;
+            
+            
             a{
                 img{
                     width: 100%;
@@ -144,6 +153,11 @@
         @include flex ( flex, center, center);
         .card{
             margin: 10px;
+            transition: 1s;
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: 0px 0px 10px 10px  rgba(0, 0, 0, 0.073);
+            }
             .card-body{
                 margin: 5px;
                 padding: 0px;

@@ -1,45 +1,55 @@
 footer{
     background-color:$color-primario;
-    .footer-titulo{
-        color:$color-secundario;
-        font-size:nth($font-size, 8);
-        font-family: 'Barlow', sans-serif;
-        font-weight: 900;
-        font-style: italic;
-        margin-left: 35px;
-        padding-top: 15px;
-        span{
-            color:$color-terciario;
+    
+        .footer-titulo{
+            color:$color-secundario;
+            font-size:nth($font-size, 8);
+            font-family: 'Barlow', sans-serif;
+            font-weight: 900;
+            font-style: italic;
+            margin-left: 35px;
+            padding-top: 15px;
+            span{
+                color:$color-terciario;
+            }
         }
-    }
-    .footer-lista{
-        list-style: none;
-        margin: 10px;
-        li{
-            a{
-                font-family: 'Barlow', sans-serif;
-                font-weight: 600;
-                text-decoration: none;
-                color:$color-secundario;
-                &:hover{
-                    color:nth($colores , 5 );
+        .footer-lista{
+            list-style: none;
+            margin: 10px;
+            li{
+                a{
+                    font-family: 'Barlow', sans-serif;
+                    font-weight: 600;
+                    text-decoration: none;
+                    color:$color-secundario;
+                    transition: 1s;
+                    &:hover{
+                        color:nth($colores , 5 );
+                    }
                 }
             }
         }
-    }
-    .footer-redes{
-        margin-left: 35px;
-        a{
-            i{
-                color:$color-secundario;
-                font-size:nth($font-size, 8);
-                padding: 5px;
-                &:hover{
-                    color:nth($colores, 5);
+    
+    
+    
+    
+            .footer-redes{
+                margin-left: 35px;
+                a{
+                    i{
+                        color:$color-secundario;
+                        font-size:nth($font-size, 8);
+                        padding: 5px;
+                        transition: 1s;
+                        &:hover{
+                            color:nth($colores, 5);
+                        }
+                    }
                 }
             }
-        }
+    
     }
+
     .copy{
         .copy-linea{
             @include flex ( flex, center,center);
@@ -47,4 +57,3 @@ footer{
             
         }
     }
-}
