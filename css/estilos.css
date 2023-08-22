@@ -132,14 +132,11 @@ header .navbar .container-fluid .navbar-brand {
 .contacto .contacto-contenedor {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 95%;
-  margin-left: 20px; }
+  align-items: center; }
   .contacto .contacto-contenedor .card {
     margin: 10px;
     transition: 1s; }
     .contacto .contacto-contenedor .card:hover {
-      transform: scale(1.1);
       box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.073); }
     .contacto .contacto-contenedor .card .card-body {
       margin: 0px;
@@ -200,8 +197,7 @@ footer {
     font-weight: 900;
     font-style: italic;
     margin-left: 35px;
-    padding-top: 15px;
-    display: inline-block; }
+    padding-top: 15px; }
     footer .footer-contenedor .footer-titulo span {
       color: red; }
   footer .footer-contenedor .footer-lista {
