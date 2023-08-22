@@ -1,59 +1,76 @@
 footer{
     background-color:$color-primario;
     
-        .footer-titulo{
-            color:$color-secundario;
-            font-size:nth($font-size, 8);
-            font-family: 'Barlow', sans-serif;
-            font-weight: 900;
-            font-style: italic;
-            margin-left: 35px;
-            padding-top: 15px;
-            span{
-                color:$color-terciario;
-            }
-        }
-        .footer-lista{
-            list-style: none;
-            margin: 10px;
-            li{
-                a{
-                    font-family: 'Barlow', sans-serif;
-                    font-weight: 600;
-                    text-decoration: none;
-                    color:$color-secundario;
-                    transition: 0.5s;
-                    &:hover{
-                        color:nth($colores , 5 );
-                    }
+        .footer-contenedor{
+            .footer-titulo{
+                color:$color-secundario;
+                font-size:nth($font-size, 8);
+                font-family: 'Barlow', sans-serif;
+                font-weight: 900;
+                font-style: italic;
+                margin-left: 35px;
+                padding-top: 15px;
+                display: inline-block;
+                span{
+                    color:$color-terciario;
                 }
             }
-        }
-    
-    
-    
-    
-            .footer-redes{
-                margin-left: 35px;
-                a{
-                    i{
+            
+            
+            
+            .footer-lista{
+                list-style: none;
+                margin: 10px;
+                
+                li{
+                    a{
+                        font-family: 'Barlow', sans-serif;
+                        font-weight: 600;
+                        text-decoration: none;
                         color:$color-secundario;
-                        font-size:nth($font-size, 8);
-                        padding: 5px;
                         transition: 0.5s;
                         &:hover{
-                            color:nth($colores, 5);
+                            color:nth($colores , 5 );
                         }
                     }
                 }
             }
-    
-    }
-
-    .copy{
-        .copy-linea{
-            @include flex ( flex, center,center);
-            color:$color-secundario;
             
+            
+            
+            
+                .footer-redes{
+                    margin-left: 35px;
+                    a{
+                        i{
+                            color:$color-secundario;
+                            font-size:nth($font-size, 8);
+                            padding: 5px;
+                            transition: 0.5s;
+                            &:hover{
+                                color:nth($colores, 5);
+                            }
+                        }
+                    }
+                }
+            
+                .footer-mapa{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    iframe{
+                        width: 100%;
+                        height: 20vh;
+                        margin: 5px;
+                    }
+                }
+            
+            .copy{
+            .copy-linea{
+                @include flex ( flex, center,center);
+                color:$color-secundario;
+                
+                }
+            }
         }
     }

@@ -42,7 +42,7 @@ header .navbar .container-fluid .navbar-brand {
 
 .camisetas .camisetas-titulo {
   padding: 20px;
-  margin: 0px;
+  margin-bottom: 20px;
   background-color: #f3f3f3; }
 
 .camisetas .camisetas-contenedor {
@@ -83,9 +83,9 @@ header .navbar .container-fluid .navbar-brand {
       margin: 0px;
       padding: 5px;
       text-align: center;
-      transition: 1s; }
+      transition: 0.5s; }
       .camisetas .camisetas-contenedor div .boton:hover {
-        background-color: #e4e4e4; }
+        color: red; }
 
 .grid-contenedor {
   color: black;
@@ -114,14 +114,6 @@ header .navbar .container-fluid .navbar-brand {
         margin: 0px;
         padding: 0px; }
 
-.whatsapp .whatsapp-logo a img {
-  color: #29b340;
-  font-size: 50px;
-  position: fixed;
-  bottom: 100px;
-  right: 50px;
-  margin-left: 20px; }
-
 .conocenos .conocenos-titulo {
   margin: 10px;
   padding: 10px;
@@ -140,7 +132,9 @@ header .navbar .container-fluid .navbar-brand {
 .contacto .contacto-contenedor {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 95%;
+  margin-left: 20px; }
   .contacto .contacto-contenedor .card {
     margin: 10px;
     transition: 1s; }
@@ -148,7 +142,7 @@ header .navbar .container-fluid .navbar-brand {
       transform: scale(1.1);
       box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.073); }
     .contacto .contacto-contenedor .card .card-body {
-      margin: 5px;
+      margin: 0px;
       padding: 0px;
       text-align: center; }
       .contacto .contacto-contenedor .card .card-body .card-text {
@@ -199,42 +193,50 @@ header .navbar .container-fluid .navbar-brand {
 
 footer {
   background-color: black; }
-  footer .footer-titulo {
+  footer .footer-contenedor .footer-titulo {
     color: white;
     font-size: 50px;
     font-family: 'Barlow', sans-serif;
     font-weight: 900;
     font-style: italic;
     margin-left: 35px;
-    padding-top: 15px; }
-    footer .footer-titulo span {
+    padding-top: 15px;
+    display: inline-block; }
+    footer .footer-contenedor .footer-titulo span {
       color: red; }
-  footer .footer-lista {
+  footer .footer-contenedor .footer-lista {
     list-style: none;
     margin: 10px; }
-    footer .footer-lista li a {
+    footer .footer-contenedor .footer-lista li a {
       font-family: 'Barlow', sans-serif;
       font-weight: 600;
       text-decoration: none;
       color: white;
       transition: 0.5s; }
-      footer .footer-lista li a:hover {
+      footer .footer-contenedor .footer-lista li a:hover {
         color: #c70101; }
-  footer .footer-redes {
+  footer .footer-contenedor .footer-redes {
     margin-left: 35px; }
-    footer .footer-redes a i {
+    footer .footer-contenedor .footer-redes a i {
       color: white;
       font-size: 50px;
       padding: 5px;
       transition: 0.5s; }
-      footer .footer-redes a i:hover {
+      footer .footer-contenedor .footer-redes a i:hover {
         color: #c70101; }
-
-.copy .copy-linea {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white; }
+  footer .footer-contenedor .footer-mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    footer .footer-contenedor .footer-mapa iframe {
+      width: 100%;
+      height: 20vh;
+      margin: 5px; }
+  footer .footer-contenedor .copy .copy-linea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; }
 
 @media screen and (max-width: 970px) {
   header {
