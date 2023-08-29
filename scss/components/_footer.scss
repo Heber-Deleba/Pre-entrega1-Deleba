@@ -1,7 +1,19 @@
+
+
+
 footer{
     background-color:$color-primario;
     
+    margin: 0px;
+    .footer-contenedor-general{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
         .footer-contenedor{
+            
+            
+            div{
+
             .footer-titulo{
                 color:$color-secundario;
                 font-size:nth($font-size, 8);
@@ -9,19 +21,23 @@ footer{
                 font-weight: 900;
                 font-style: italic;
                 margin-left: 35px;
+                margin-bottom: 20px;
                 padding-top: 15px;
-                display: inline-block;
+
+                
                 
                 span{
                     color:$color-terciario;
                 }
             }
+            }
             
-            
-            
+        
+        div{ 
             .footer-lista{
                 list-style: none;
                 margin: 10px;
+                margin-bottom: 20px;
                 
                 
                 
@@ -38,12 +54,14 @@ footer{
                     }
                 }
             }
+        }
             
             
             
             
                 .footer-redes{
                     margin-left: 35px;
+                    margin-top: 20px;
                     a{
                         i{
                             color:$color-secundario;
@@ -56,22 +74,30 @@ footer{
                         }
                     }
                 }
+
+            }
+        
+        .footer-mapa{
             
-                .footer-mapa{
-                    display: flex;
-                    justify-content:flex-end;
-                    align-items: center;
-                    iframe{
-                        margin: 5px;
-                    }
-                }
             
-            .copy{
-            .copy-linea{
-                @include flex ( flex, center,center);
-                color:$color-secundario;
+                .footer-mapa-titulo{
+                    font-family: 'Barlow', sans-serif;
+                    font-weight: 600;
+                    color: rgb(255, 255, 255);
                 
                 }
-            }
+                
+            
+        }
+    } 
+    }
+
+
+    .copy{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .copy-linea{
+            color: white;
         }
     }
