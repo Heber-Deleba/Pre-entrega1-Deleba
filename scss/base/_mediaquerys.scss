@@ -33,26 +33,30 @@
     footer{
         justify-content: center;
         .footer-titulo{
-            margin-left: 10px;
+            margin-right: 35px;
             font-size: 40px;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
         .footer-lista{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 0px;
         }
         .footer-redes{
             display: flex;
             justify-content: center;
+            align-items: center;
+            margin-right: 35px;
         }
     }
 
     .hero{
         .hero-titulo{
-            font-size:nth($font-size, 5);
+            font-size:nth($font-size, 6);
             height: 30vh;
         }
     }
@@ -86,15 +90,7 @@
 }
 
 @media screen and (max-width:450px){
-    header{
-        .navbar{
-            .container-fluid{
-                .navbar-brand{
-                    font-size:nth($font-size, 6);
-                }
-            }
-        }
-    }
+    
 
     .camisetas{
         .camisetas-contenedor{
@@ -128,10 +124,13 @@
 }
 
 @media screen and (max-width:350px){
+
+
     .hero{
         .hero-titulo{
             font-size:nth($font-size, 5);
             font-weight: 500;
+            
         }
     }
 }

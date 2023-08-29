@@ -187,6 +187,18 @@
     }
 }
 
+
+.col-md-4{
+    .btn{
+        background-color: $color-terciario;
+        border-color: $color-terciario;
+        transition: 0.5s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
 .terminos{
     .terminos-titulo{
         margin: 10px;

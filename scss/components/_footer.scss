@@ -10,6 +10,7 @@ footer{
                 font-style: italic;
                 margin-left: 35px;
                 padding-top: 15px;
+                display: inline-block;
                 
                 span{
                     color:$color-terciario;
@@ -21,6 +22,8 @@ footer{
             .footer-lista{
                 list-style: none;
                 margin: 10px;
+                
+                
                 
                 li{
                     a{
@@ -56,11 +59,9 @@ footer{
             
                 .footer-mapa{
                     display: flex;
-                    justify-content: center;
+                    justify-content:flex-end;
                     align-items: center;
                     iframe{
-                        width: 100%;
-                        height: 20vh;
                         margin: 5px;
                     }
                 }
