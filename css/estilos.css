@@ -201,7 +201,7 @@ footer {
   footer .footer-contenedor-general {
     display: flex;
     justify-content: space-between;
-    align-items: baseline; }
+    align-items: center; }
     footer .footer-contenedor-general .footer-contenedor div .footer-titulo {
       color: white;
       font-size: 50px;
@@ -209,25 +209,27 @@ footer {
       font-weight: 900;
       font-style: italic;
       margin-left: 35px;
-      margin-bottom: 20px;
-      padding-top: 15px; }
+      margin-bottom: 20px; }
       footer .footer-contenedor-general .footer-contenedor div .footer-titulo span {
         color: red; }
     footer .footer-contenedor-general .footer-contenedor div .footer-lista {
       list-style: none;
       margin: 10px;
       margin-bottom: 20px; }
-      footer .footer-contenedor-general .footer-contenedor div .footer-lista li a {
-        font-family: 'Barlow', sans-serif;
-        font-weight: 600;
-        text-decoration: none;
-        color: white;
-        transition: 0.5s; }
-        footer .footer-contenedor-general .footer-contenedor div .footer-lista li a:hover {
-          color: #c70101; }
+      footer .footer-contenedor-general .footer-contenedor div .footer-lista li {
+        margin: 15px;
+        margin-left: 0px; }
+        footer .footer-contenedor-general .footer-contenedor div .footer-lista li a {
+          font-family: 'Barlow', sans-serif;
+          font-weight: 600;
+          text-decoration: none;
+          color: white;
+          transition: 0.5s; }
+          footer .footer-contenedor-general .footer-contenedor div .footer-lista li a:hover {
+            color: #c70101; }
     footer .footer-contenedor-general .footer-contenedor .footer-redes {
       margin-left: 35px;
-      margin-top: 20px; }
+      margin-top: 30px; }
       footer .footer-contenedor-general .footer-contenedor .footer-redes a i {
         color: white;
         font-size: 50px;
