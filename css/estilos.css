@@ -41,8 +41,8 @@ header .navbar .container-fluid .navbar-brand {
   margin: 0px; }
 
 .camisetas .camisetas-titulo {
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 1rem;
+  margin-bottom: 1.3rem;
   background-color: #f3f3f3; }
 
 .camisetas .camisetas-contenedor {
@@ -115,8 +115,8 @@ header .navbar .container-fluid .navbar-brand {
         padding: 0px; }
 
 .conocenos .conocenos-titulo {
-  margin: 10px;
-  padding: 10px;
+  margin-bottom: 1.3rem;
+  padding: 1rem;
   background-color: #f3f3f3; }
 
 .conocenos .conocenos-parrafo {
@@ -126,8 +126,8 @@ header .navbar .container-fluid .navbar-brand {
   text-align: center; }
 
 .contacto .contacto-titulo {
-  margin: 10px;
-  padding: 10px; }
+  margin: 1rem;
+  padding: 1rem; }
 
 .contacto .contacto-contenedor {
   display: flex;
@@ -149,8 +149,8 @@ header .navbar .container-fluid .navbar-brand {
         text-align: center; }
 
 .registrarse .registrarse-contenedor .registrarse-titulo {
-  margin: 10px;
-  padding: 10px;
+  margin-bottom: 1.3rem;
+  padding: 1rem;
   background-color: #f3f3f3; }
 
 .registrarse .registrarse-contenedor .registrarse-parrafo {
@@ -174,8 +174,8 @@ header .navbar .container-fluid .navbar-brand {
     transform: scale(1.1); }
 
 .terminos .terminos-titulo {
-  margin: 10px;
-  padding: 10px;
+  margin-bottom: 1.3rem;
+  padding: 1rem;
   background-color: #f3f3f3; }
 
 .terminos .terminos-parrafo {
@@ -185,8 +185,8 @@ header .navbar .container-fluid .navbar-brand {
   text-align: center; }
 
 .politica .politica-titulo {
-  margin: 10px;
-  padding: 10px;
+  margin-bottom: 1.3rem;
+  padding: 1rem;
   background-color: #f3f3f3; }
 
 .politica .politica-parrafo {
@@ -209,15 +209,15 @@ footer {
       font-weight: 900;
       font-style: italic;
       margin-left: 35px;
-      margin-bottom: 20px; }
+      margin-bottom: 1.3rem; }
       footer .footer-contenedor-general .footer-contenedor div .footer-titulo span {
         color: red; }
     footer .footer-contenedor-general .footer-contenedor div .footer-lista {
       list-style: none;
       margin: 10px;
-      margin-bottom: 20px; }
+      margin-bottom: 1.3rem; }
       footer .footer-contenedor-general .footer-contenedor div .footer-lista li {
-        margin: 15px;
+        margin: 1rem;
         margin-left: 0px; }
         footer .footer-contenedor-general .footer-contenedor div .footer-lista li a {
           font-family: 'Barlow', sans-serif;
@@ -258,35 +258,16 @@ footer {
     flex-direction: column; }
   .whatsapp .whatsapp-logo {
     display: none; }
+  .footer-mapa {
+    display: none; }
   .copy .copy-linea {
     color: white;
     font-size: 10px; } }
 
 @media screen and (max-width: 650px) {
-  footer {
-    justify-content: center; }
-    footer .footer-titulo {
-      margin-right: 35px;
-      font-size: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    footer .footer-lista {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 0px; }
-    footer .footer-redes {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 35px; }
   .hero .hero-titulo {
     font-size: 30px;
     height: 30vh; }
-  .conocenos .conocenos-titulo {
-    font-size: 20px; }
   .conocenos .conocenos-parrafo {
     font-size: 12px; }
   .contacto .contacto-titulo {
@@ -299,7 +280,7 @@ footer {
 @media screen and (max-width: 450px) {
   .camisetas .camisetas-contenedor div h4 {
     font-size: 20px; }
-  footer .footer-titulo {
+  .footer-contenedor-general .footer-titulo {
     font-size: 30px; }
   .contacto-contenedor .card .card-body .card-tittle {
     font-size: 15px; }

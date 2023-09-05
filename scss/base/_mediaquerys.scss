@@ -19,6 +19,10 @@
         }
     }
 
+    .footer-mapa{
+        display: none;
+    }
+
     .copy{
         .copy-linea{
             color:$color-secundario;
@@ -28,31 +32,13 @@
 }
 
 @media screen and (max-width:650px){
+
+    
+
     
     
-    footer{
-        justify-content: center;
-        .footer-titulo{
-            margin-right: 35px;
-            font-size: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .footer-lista{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 0px;
-        }
-        .footer-redes{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 35px;
-        }
-    }
+    
+    
 
     .hero{
         .hero-titulo{
@@ -62,9 +48,7 @@
     }
 
     .conocenos{
-        .conocenos-titulo{
-            font-size:nth($font-size, 5);
-        }
+        
         .conocenos-parrafo{
             font-size:nth($font-size, 3);
         }
@@ -101,7 +85,8 @@
             }
         }
     }
-    footer{
+    .footer-contenedor-general{
+        
         .footer-titulo{
             font-size:nth($font-size, 6);
         }
@@ -123,6 +108,7 @@
     }
 }
 
+
 @media screen and (max-width:350px){
 
 
@@ -134,4 +120,6 @@
         }
     }
 }
+
+
 

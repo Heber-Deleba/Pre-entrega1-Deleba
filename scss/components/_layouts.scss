@@ -17,8 +17,8 @@
 
 .camisetas{
     .camisetas-titulo{
-        padding: 20px;
-        margin-bottom: 20px;
+        padding: 1rem;
+        margin-bottom: 1.3rem;
         background-color:nth($colores, 1);
         @extend %fuente;
     }
@@ -114,8 +114,8 @@
 
 .conocenos{
     .conocenos-titulo{
-        margin: 10px;
-        padding: 10px;
+        margin-bottom: 1.3rem;
+        padding: 1rem;
         background-color:nth($colores, 1);
         @extend %fuente;
     }
@@ -130,8 +130,8 @@
 .contacto{
     
     .contacto-titulo{
-        margin: 10px;
-        padding: 10px;
+        margin: 1rem;
+        padding: 1rem;
         @extend %fuente;
     }
     .contacto-contenedor{
@@ -164,8 +164,8 @@
 .registrarse{
     .registrarse-contenedor{
         .registrarse-titulo{
-            margin: 10px;
-            padding: 10px;
+            margin-bottom: 1.3rem;
+            padding: 1rem;
             background-color:nth($colores, 1); 
             @extend %fuente;
         }
@@ -201,8 +201,8 @@
 
 .terminos{
     .terminos-titulo{
-        margin: 10px;
-        padding: 10px;
+        margin-bottom: 1.3rem;
+        padding: 1rem;
         background-color:nth($colores, 1);
         @extend %fuente;
     }
@@ -217,8 +217,8 @@
 
 .politica{
     .politica-titulo{
-        margin: 10px;
-        padding: 10px;
+        margin-bottom: 1.3rem;
+        padding: 1rem;
         background-color:nth($colores, 1);
         @extend %fuente;
     }
@@ -231,4 +231,3 @@
     }
 }
 
-//----MENSAJE PARA TUTOR: No se que parte del codigo se podria trasladar a _generales.scss y ademas no se si utilice bien el mixin ya que no se aplico en estilos.css de la misma forma que lo vimos en clase//
