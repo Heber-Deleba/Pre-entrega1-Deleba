@@ -19,9 +19,6 @@
         }
     }
 
-    .footer-mapa{
-        display: none;
-    }
 
     .copy{
         .copy-linea{
@@ -31,11 +28,37 @@
     }
 }
 
+@media screen and (max-width:800px){
+    .footer-mapa{
+        display: none;
+    }
+}
+
 @media screen and (max-width:650px){
 
-    
 
-    
+    footer{
+        .footer-contenedor-general{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .footer-contenedor{
+                text-align: center;
+                .footer-titulo{
+                    margin-right: 35px;
+                }
+                .footer-lista{
+                    padding-right: 32px;
+                    li{
+                        margin-left: 16px;
+                    }
+                }
+                .footer-redes{
+                    margin-right: 35px;
+                }
+            }
+        }
+    }
     
     
     
@@ -56,7 +79,7 @@
 
     .contacto{
         .contacto-titulo{
-            font-size:nth($font-size, 4);
+            font-size:nth($font-size, 5);
         }
     }
 

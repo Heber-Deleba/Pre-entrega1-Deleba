@@ -258,20 +258,36 @@ footer {
     flex-direction: column; }
   .whatsapp .whatsapp-logo {
     display: none; }
-  .footer-mapa {
-    display: none; }
   .copy .copy-linea {
     color: white;
     font-size: 10px; } }
 
+@media screen and (max-width: 800px) {
+  .footer-mapa {
+    display: none; } }
+
 @media screen and (max-width: 650px) {
+  footer .footer-contenedor-general {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    footer .footer-contenedor-general .footer-contenedor {
+      text-align: center; }
+      footer .footer-contenedor-general .footer-contenedor .footer-titulo {
+        margin-right: 35px; }
+      footer .footer-contenedor-general .footer-contenedor .footer-lista {
+        padding-right: 32px; }
+        footer .footer-contenedor-general .footer-contenedor .footer-lista li {
+          margin-left: 16px; }
+      footer .footer-contenedor-general .footer-contenedor .footer-redes {
+        margin-right: 35px; }
   .hero .hero-titulo {
     font-size: 30px;
     height: 30vh; }
   .conocenos .conocenos-parrafo {
     font-size: 12px; }
   .contacto .contacto-titulo {
-    font-size: 15px; }
+    font-size: 20px; }
   .registrarse .row {
     font-size: 10px; }
   .grid-contenedor .grid-enlaces {
