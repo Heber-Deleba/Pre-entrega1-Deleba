@@ -9,21 +9,21 @@ const camisetas = [
         nombre: "CAMISETA AC MILAN TITULAR '06",
         precio: 200,
         boton : "comprar",
-        img: "file:///C:/Users/deleb/OneDrive/Escritorio/comision-43050/img/milan.jpg",
+        img: "https://camisgo.com/wp-content/uploads/2023/05/milan-06-07-300x400.jpg",
     },
     {
         id: 2,
         nombre: "CAMISETA BARCELONA TITULAR '05",
         precio: 200,
         boton : "comprar",
-        img: "file:///C:/Users/deleb/OneDrive/Escritorio/comision-43050/img/barca-05.png",
+        img: "https://camisgo.com/wp-content/uploads/2023/05/barca-05-06-1-300x400.png",
     },
     {
         id: 3,
         nombre: "CAMISETA ATLETICO MADIRD TITULAR '94",
         precio: 180,
         boton : "comprar",
-        img: "file:///C:/Users/deleb/OneDrive/Escritorio/comision-43050/img/atm-94.png",
+        img: "https://camisgo.com/wp-content/uploads/2023/05/atm-94-95-300x400.png",
     },
     
 ];
