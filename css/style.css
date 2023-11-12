@@ -19,6 +19,11 @@
 
 /*!------HEADER------*/
 
+.ver-carrito{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
 
 .navbar-brand {
     color: rgb(0, 0, 0);
@@ -127,6 +132,41 @@ div h4 {
 .boton:hover {
     background-color: #e4e4e4;
 }
+
+
+
+
+.carrito-container{
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: white;
+    background-color: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+
+}
+
+.estructura-carrito{
+    display: flex;
+    justify-content: space-around;
+    background-color: #0b0b0b;
+    color: white;
+    width: 100%;
+}
+
+
+
+
+
+
+
 
 .whatsapp img {
     color: #29b340;

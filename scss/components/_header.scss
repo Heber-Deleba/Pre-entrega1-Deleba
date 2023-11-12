@@ -17,3 +17,17 @@ header{
         }
     }
 }
+
+
+
+header{
+    .nav-bar-carrito{
+        .nav-bar{
+            .ver-carrito{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+            }
+        }
+    }
+}

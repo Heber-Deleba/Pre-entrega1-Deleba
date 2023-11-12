@@ -25,6 +25,11 @@ header .navbar .container-fluid .navbar-brand {
   header .navbar .container-fluid .navbar-brand span {
     color: red; }
 
+header .nav-bar-carrito .nav-bar .ver-carrito {
+  display: flex;
+  justify-content: end;
+  align-items: center; }
+
 .hero .hero-titulo {
   display: flex;
   justify-content: center;
@@ -39,6 +44,64 @@ header .navbar .container-fluid .navbar-brand {
   height: 60vh;
   flex-direction: column;
   margin: 0px; }
+
+.nav-bar-carrito .nav-bar .ver-carrito {
+  cursor: pointer; }
+
+.carrito-container {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  color: white;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none; }
+
+.estructura-carrito {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0b0b0b;
+  color: white;
+  width: 100%; }
+  .estructura-carrito .carrito-boton {
+    color: red; }
+
+.carrito-boton {
+  cursor: pointer; }
+
+.carrito-container .carrito-contenido {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px; }
+  .carrito-container .carrito-contenido h3 {
+    font-size: 15px; }
+  .carrito-container .carrito-contenido .eliminar-producto {
+    color: red; }
+
+.carrito-container div img {
+  height: 120px;
+  width: 120px; }
+
+.eliminar-producto {
+  cursor: pointer; }
+
+.total-compra {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px; }
+
+div .boton {
+  border: none; }
 
 .camisetas .camisetas-titulo {
   padding: 1rem;

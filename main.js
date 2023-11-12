@@ -1,126 +1,149 @@
 
+// ---------------3er PRE ENTREGA-----------------
 
-alert (` BIENVENIDO A SAOKO`)
 
-function saludarCliente (nombre){
-    alert (`Hola ${nombre}`);
-}
-let nombre = prompt ("ingrese su nombre");
-saludarCliente (nombre);
-
+//PRODUCTOS
 const camisetas = [
-    {modelo : "barcelona" , precio : 32000},
-    {modelo : "milan" , precio : 32000},
-    {modelo : "boca" , precio : 30000},
-    {modelo : "liverpool" , precio : 31000},
-    {modelo : "betis" , precio : 30000},
-    {modelo : "chelsea" , precio : 33000},
-]
-let carrito = []
-
-
-let comprar = prompt ("Quieres comprar algunas de nuestras camisetas retro? ingresa si o no.");
-while (comprar !="si" && comprar !="no"){
-    alert ("Respuesta incorrecta");
-comprar = prompt ("Quieres comprar algunas de nuestras camisetas retro? ingresa si o no.");
-}
-
-
-if (comprar === "si"){
-    alert ("Estos son nuestros modelos disponibles");
-    let modelos = camisetas.map((camiseta) => camiseta.modelo + " " + "$" + camiseta.precio );
-    alert (modelos.join(" -- "));
-}
-else if(comprar === "no"){
-    alert ("Gracias, hasta luego!");
+    {
+        id: 1,
+        nombre: "CAMISETA AC MILAN TITULAR '06",
+        precio: 200,
+        boton : "comprar",
+        img: "file:///C:/Users/deleb/OneDrive/Escritorio/comision-43050/img/milan.jpg",
+    },
+    {
+        id: 2,
+        nombre: "CAMISETA BARCELONA TITULAR '05",
+        precio: 200,
+        boton : "comprar",
+        img: "file:///C:/Users/deleb/OneDrive/Escritorio/comision-43050/img/barca-05.png",
+    },
+    {
+        id: 3,
+        nombre: "CAMISETA ATLETICO MADIRD TITULAR '94",
+        precio: 180,
+        boton : "comprar",
+        img: "file:///C:/Users/deleb/OneDrive/Escritorio/comision-43050/img/atm-94.png",
+    },
     
-}
+];
+
+//LOGICA
+
+const camisetasContenedor = document.getElementById ("camisetasContenedor");
+const verCarrito = document.getElementById ("verCarrito");
+const carritoContainer = document.getElementById ("carrito-container");
+
+//Guardado en Local storage
+let carrito = JSON.parse (localStorage.getItem ("carrito")) || [];
 
 
-while ( comprar != "no"){
-    let camiseta = prompt ("agrega una camiseta a tu carrito!");
-    let precio = 0;
+//DOM cartas de productos
+camisetas.forEach ((modelos) => {
+    let contenido = document.createElement ("div");
+    contenido.innerHTML = `
+    <img src ="${modelos.img}">
+    <h3>${modelos.nombre}</h3>
+    <h4>${modelos.precio}</h4>
+    `;
+    camisetasContenedor.append (contenido);
 
-    if (camiseta == "barcelona" || camiseta == "milan" 
-    || camiseta == "boca" || camiseta == "liverpool" 
-    || camiseta == "betis" || camiseta == "chelsea" ){
-
-    switch (camiseta){
-        case  "barcelona" :
-        precio = 32000 ;
-        break;
-
-        case  "milan" :
-        precio = 32000 ;
-        break;
-
-        case  "boca" :
-        precio = 30000 ;
-        break;
-
-        case  "liverpool" :
-        precio = 31000 ;
-        break;
-
-        case  "betis" :
-        precio = 30000 ;
-        break;
-
-        case  "chelsea" :
-        precio = 33000 ;
-        break;
-
-        default :
-        break;
-    }
-    let unidades = parseInt (prompt("Cuantas camisetas desea llevar?"));
-    carrito.push ({camiseta, unidades, precio});
-    console.log(carrito);
-    alert ("camiseta agregada al carrito con exito."); 
-    } else {
-        alert ("No tenemos esa camiseta")
-    }
-
-    
+    let boton = document.createElement ("button");
+    boton.innerText = "comprar";
+    boton.className = "boton";
+    contenido.append (boton)
 
 
-    comprar = prompt ("Quieres seguir comprando?")
-    while ( comprar === "no"){
-        alert ("Gracias por su compra, hasta luego.")
-        carrito.forEach ((carritoFinal) => {
-        alert (`modelos : ${carritoFinal.camiseta} unidades : ${carritoFinal.unidades} 
-        total a pagar por la camiseta : ${carritoFinal.unidades * carritoFinal.precio}`)
+
+//Evento cartas de productos
+    contenido.addEventListener("click" , () => {
+        carrito.push({
+            id : modelos.id,
+            nombre : modelos.nombre,
+            precio : modelos.precio,
+            img : modelos.img,
         })
-        break;
-    }
+        console.log(carrito);
+        guardado();
+    })
+})
+
+//DOM abrir carrito
+const pintarCarrito = () => {
+    carritoContainer.innerHTML ="";
+    carritoContainer.style.display ="flex";
+    const estructuraCarrito = document.createElement ("div");
+    estructuraCarrito.className = "estructura-carrito";
+    estructuraCarrito.innerHTML =`
+    <h1 class="carrito-titulo">Carrito</h1>
+    `;
+    carritoContainer.append(estructuraCarrito);
+
+    const carritoBoton = document.createElement ("h1");
+    carritoBoton.innerText = "Salir";
+    carritoBoton.className = "carrito-boton";
+    carritoBoton.addEventListener ("click" , () =>{
+        carritoContainer.style.display = "none"
+    })
+
+    estructuraCarrito.append (carritoBoton);
+
+
+//DOM contenido del carrito
+carrito.forEach((modelos) => {
+    const carritoContenido = document.createElement ("div");
+    carritoContenido.className = "carrito-contenido";
+    carritoContenido.innerHTML = `
+    <img src ="${modelos.img}">
+    <h3>${modelos.nombre}</h3>
+    <h4>$${modelos.precio}</h4>
+    `
+    carritoContainer.append(carritoContenido);
+
+
+
+//DOM eliminar producto
+    let eliminar = document.createElement("span");
+    eliminar.innerText = "ELIMINAR";
+    eliminar.className = "eliminar-producto";
+    carritoContenido.append (eliminar);
+//Evento eliminar productos
+    eliminar.addEventListener ("click", eliminarProducto);
+})
+
+
+
+//DOM suma de los productos
+    const total = carrito.reduce ((acc, el) => acc + el.precio, 0);
+
+    const totalCompra = document.createElement ("div");
+    totalCompra.className = "total-compra";
+    totalCompra.innerHTML = `Total a Pagar =$ ${total}`;
+    carritoContainer.append (totalCompra);
+};
+
+
+//Evento abrir carrito
+verCarrito.addEventListener ("click", pintarCarrito);
+
+
+//Eliminar productos del Local Storage.
+const eliminarProducto = () => {
+    const foundId = carrito.find ((element) => element.id);
+
+    carrito = carrito.filter ((carritoId) => {
+        return carritoId !== foundId;
+    });
+
+    guardado();
+    pintarCarrito ();
 }
 
 
-const total = carrito.reduce ((acum , item) => acum + item.precio * item.unidades, 0);
-
-
-let confirmacion = prompt ("confirma su compra?");
-while (confirmacion !="si" && confirmacion !="no"){
-    alert ("Respuesta incorrecta");
-confirmacion = prompt ("confirma su compra?.");
-}
-
-if (confirmacion === "si"){
-    alert (`TOTAL : ${total}`);
-} else if (confirmacion === "no"){
-    alert ("compra cancelada");
-}
-
-
-
-
-
-
-
-
-
-
-
+//Guardado en Local Storage
+const guardado = () => {
+localStorage.setItem("carrito", JSON.stringify (carrito));
+};
 
 
 
@@ -144,116 +167,135 @@ if (confirmacion === "si"){
 /*
 
 
+//--------------------EVENTOS----------//
 
-
-
-
-alert (` BIENVENIDO A SAOKO`)
-
-function saludarCliente (nombre){
-    alert (`Hola ${nombre}`);
+const alerta = document.querySelector ("#alerta");
+alerta.addEventListener ("click" , mostrarAlerta);
+function mostrarAlerta (){
+    alert ("formulario enviado");
 }
-let nombre = prompt ("ingrese su nombre");
-saludarCliente (nombre);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/-----------------DOM---------------------/
+const contenidoIndex = document.querySelector (".hero");
+const hero = document.querySelectorAll (".hero-titulo");
+hero[0].innerText = "las mejores camisetardas"
+
+
+
+const camisetas = ["boca","river","central"]
+let lista = document.createElement ("ul");
+lista.classList.add ("lista");
+for (modelo of camisetas){
+    lista.innerHTML += `<li class = "lista-item"> ${modelo}</li>`
+}
+contenidoIndex.append (lista);
+
+
+
+
+
+
+
+/---------------------SEGUNDA PRE ENTREGA--------------------/
+
+
+alert('BIENVENIDO A SAOKO');
+
+function saludarCliente(nombre) {
+    alert(`Hola ${nombre}`);
+}
+
+let nombre = prompt('Ingrese su nombre');
+saludarCliente(nombre);
 
 const camisetas = [
-    {modelo : "barcelona" , precio : 32000},
-    {modelo : "milan" , precio : 32000},
-    {modelo : "boca" , precio : 30000},
-    {modelo : "liverpool" , precio : 31000},
-    {modelo : "betis" , precio : 30000},
-    {modelo : "chelsea" , precio : 33000},
-]
-let carrito = []
+    { modelo: 'barcelona', precio: 32000 },
+    { modelo: 'milan', precio: 32000 },
+    { modelo: 'boca', precio: 30000 },
+    { modelo: 'liverpool', precio: 31000 },
+    { modelo: 'betis', precio: 30000 },
+    { modelo: 'chelsea', precio: 33000 },
+];
 
+let carrito = [];
 
-let comprar = prompt ("Quieres comprar algunas de nuestras camisetas retro? ingresa si o no.");
-while (comprar !="si" && comprar !="no"){
-    alert ("Respuesta incorrecta");
-comprar = prompt ("Quieres comprar algunas de nuestras camisetas retro? ingresa si o no.");
+let comprar = prompt('¿Quieres comprar algunas de nuestras camisetas retro? Ingresa si o no.');
+
+while (comprar !== 'si' && comprar !== 'no') {
+    alert('Respuesta incorrecta');
+    comprar = prompt('¿Quieres comprar algunas de nuestras camisetas retro? Ingresa si o no.');
 }
 
-
-if (comprar === "si"){
-    alert ("Estos son nuestros modelos disponibles");
-    let modelos = camisetas.map((camiseta) => camiseta.modelo + " " + "$" + camiseta.precio );
-    alert (modelos.join(" -- "));
-}
-else if(comprar === "no"){
-    alert ("Gracias, hasta luego!");   
+if (comprar === 'si') {
+    alert('Estos son nuestros modelos disponibles');
+    let modelos = camisetas.map((camiseta) => `${camiseta.modelo} $${camiseta.precio}`);
+    alert(modelos.join(' -- '));
+} else if (comprar === 'no') {
+    alert('Gracias, hasta luego!');
 }
 
-
-while ( comprar != "no"){
-    let camiseta = prompt ("agrega una camiseta a tu carrito!");
-    }
+while (comprar !== 'no') {
+    let camiseta = prompt('Agrega una camiseta a tu carrito!');
     let precio = 0;
 
-    if (camiseta == "barcelona" || camiseta == "milan" 
-    || camiseta == "boca" || camiseta == "liverpool" 
-    || camiseta == "betis" || camiseta == "chelsea" ){
+    if (camiseta === 'barcelona' || camiseta === 'milan' || camiseta === 'boca' || camiseta === 'liverpool' || camiseta === 'betis' || camiseta === 'chelsea') {
+        switch (camiseta) {
+            case 'barcelona':
+                precio = 32000;
+                break;
+            case 'milan':
+                precio = 32000;
+                break;
+            case 'boca':
+                precio = 30000;
+                break;
+            case 'liverpool':
+                precio = 31000;
+                break;
+            case 'betis':
+                precio = 30000;
+                break;
+            case 'chelsea':
+                precio = 33000;
+                break;
+            default:
+                break;
+        }
 
-    switch (camiseta){
-        case  "barcelona" :
-        precio = 32000 ;
-        break;
-
-        case  "milan" :
-        precio = 32000 ;
-        break;
-
-        case  "boca" :
-        precio = 30000 ;
-        break;
-
-        case  "liverpool" :
-        precio = 31000 ;
-        break;
-
-        case  "betis" :
-        precio = 30000 ;
-        break;
-
-        case  "chelsea" :
-        precio = 33000 ;
-        break;
-
-        default :
-        break;
-    }
-    let unidades = parseInt (prompt("Cuantas camisetas desea llevar?"));
-    carrito.push ({camiseta, unidades, precio});
-    console.log(carrito);
-    alert ("camiseta agregada al carrito con exito."); 
+        let unidades = parseInt(prompt('¿Cuántas camisetas desea llevar?'));
+        carrito.push({ camiseta, unidades, precio });
+        console.log(carrito);
+        alert('Camiseta agregada al carrito con éxito.');
     } else {
-        alert ("No tenemos esa camiseta")
+        alert('No tenemos esa camiseta');
     }
 
-    
+    comprar = prompt('¿Quieres seguir comprando?');
 
+    if (comprar === 'no') {
+        alert('Gracias por su compra, hasta luego.');
 
-    comprar = prompt ("Quieres seguir comprando?")
-    while ( comprar === "no"){
-        alert ("Gracias por su compra, hasta luego.")
-        carrito.forEach ((carritoFinal) => {
-        alert (`modelos : ${carritoFinal.camiseta} unidades : ${carritoFinal.unidades} 
-        total a pagar por la camiseta : ${carritoFinal.unidades * carritoFinal.precio}`)
-        })
-        break;
+        carrito.forEach((carritoFinal) => {
+            const totalPorCamiseta = carritoFinal.unidades * carritoFinal.precio;
+            alert(`Modelo: ${carritoFinal.camiseta} Unidades: ${carritoFinal.unidades} Total a pagar por la camiseta: ${totalPorCamiseta}`);
+        });
+
+        const total = carrito.reduce((acum, item) => acum + item.precio * item.unidades, 0);
+        alert(`TOTAL: $${total}`);
     }
-
-const total = carrito.reduce ((acum , item) => acum + item.precio * item.unidades, 0);
-
-
-let confirmacion = prompt ("confirma su compra?");
-while (confirmacion !="si" && confirmacion !="no"){
-    alert ("Respuesta incorrecta");
-confirmacion = prompt ("confirma su compra?.");
-}
-if (confirmacion === "si"){
-    alert (`TOTAL : ${total}`);
-} else if (confirmacion === "no"){
-    alert ("compra cancelada");
 }
 
 
@@ -264,24 +306,7 @@ if (confirmacion === "si"){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/-------------------PRIMER PRE ENTREGA---------------/
 
 
 
@@ -326,79 +351,7 @@ let talle = prompt ("ingrese talle s,m,l,xl,xxl o volver");
     }
     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+////////////////////////////////////////////////////////////
 
 
 
@@ -444,15 +397,15 @@ let talle = prompt ("ingrese talle s,m,l,xl,xxl o volver");
         nacionalidad : "argentino" 
     }
 
-    //usuario1.nacionalidad = "brasilera"; se pueden asignar propiedades en otra instacia del programa
+    /usuario1.nacionalidad = "brasilera"; se pueden asignar propiedades en otra instacia del programa
 
     console.log (usuario1); 
-    //console.log (usuario1.nombre);
-    //console.log (usuario1 ["nombre"]); otra forma de llamar al valor//
-    //console.log (usuario1.hobbie.hobbie2);
+    /console.log (usuario1.nombre);
+    /console.log (usuario1 ["nombre"]); otra forma de llamar al valor//
+    /console.log (usuario1.hobbie.hobbie2);
     
 
-    //------FUNCIONES CONSTRUCTORAS------//
+    /------FUNCIONES CONSTRUCTORAS------//
 
     
 
@@ -467,7 +420,7 @@ const producto1 = new Producto ("sillon", "rojo", 50000);
 console.log (producto1);
 
 
-//----------CLASES---------//
+/----------CLASES---------//
 
 class Producto {
     constructor (titulo, color, precio){
@@ -482,7 +435,7 @@ console.log (producto1);
 
 
 
-//----------METODOS----------//
+/----------METODOS----------//
 
 class Persona {
     constructor (nombre, edad, nacionalidad){
@@ -504,7 +457,7 @@ persona1.cumpleanios ();
 console.log (persona1.edad);
 
 
-//-------- OPERADOR IN-------//
+/-------- OPERADOR IN-------//
 
 class Persona {
     constructor (nombre, edad, nacionalidad){
@@ -526,7 +479,7 @@ if ("nombre" in persona1){
 }
 
 
-//-------OPERADOR FOR IN--------//
+/-------OPERADOR FOR IN--------//
 
 class Persona {
     constructor (nombre, edad, nacionalidad){
@@ -547,7 +500,7 @@ for (const propiedad in persona1){
 
 
 
-//---------ARRAYS----------//
+/---------ARRAYS----------//
 
 const producto = ["sillon","silla", "mesa", "ropero"];
 const numeros = [1, 2, 3, 4, 5];
@@ -564,21 +517,21 @@ const usuarios = [
 
 ];
 
-//--------ACCEDIENDO A LOS ARRAYS--------//
+/--------ACCEDIENDO A LOS ARRAYS--------//
 
 //const producto = ["sillon","silla", "mesa", "ropero"];
 //console.log (producto);
 //console.log (producto [2]); //los indices arrancan en 0//
 
-//--------RECORRIENDO A NUESTRO ARRAY-------//
+/--------RECORRIENDO A NUESTRO ARRAY-------//
 
 const producto = ["sillon","silla", "mesa", "ropero"];
 for ( let i = 0; i < 4; i++){
 console.log (producto [i]);
 }
 
-//-------------------------------------------------FUNCIONES DE ALTO ORDEN--------------------------------------//
-//-----------------ABSTRACCION---------------//
+/-------------------------------------------------FUNCIONES DE ALTO ORDEN--------------------------------------//
+/-----------------ABSTRACCION---------------//
 function sumarRango(min, max){
     let total = 0;
 for (let i = min; i <= max; i++){
@@ -593,7 +546,7 @@ let sumaEntreTresYSiete = sumarRango ( 3,7 );
 console.log (sumaEntreTresYSiete);
 
 
-//-----------RETORNO DE FUNCIONES------------//
+/-----------RETORNO DE FUNCIONES------------//
 
 function mayorQue (x){
     return (num) => num > x;
@@ -605,7 +558,7 @@ console.log (mayorQue (9));
 
 
 
-//---------METODOS DE BUSQUEDA Y TRANSFORMACION------------//
+/---------METODOS DE BUSQUEDA Y TRANSFORMACION------------//
 
 const numeros = [ 50, 12, 37, 17, 25, 6];
 const animales = [ "perro", "gato", "cisne", "tortuga"];
