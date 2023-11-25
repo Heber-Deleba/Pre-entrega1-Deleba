@@ -48,6 +48,17 @@ header .nav-bar-carrito .nav-bar .ver-carrito {
 .nav-bar-carrito .nav-bar .ver-carrito {
   cursor: pointer; }
 
+.nav-bar-carrito .nav-bar .cantidad-carrito {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 30px;
+  right: 14px;
+  position: absolute;
+  display: none; }
+
 .carrito-container {
   width: 80%;
   margin: 0 10%;
@@ -80,12 +91,30 @@ header .nav-bar-carrito .nav-bar .ver-carrito {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 70%;
+  width: 100%;
   margin: 10px; }
   .carrito-container .carrito-contenido h3 {
     font-size: 15px; }
+  .carrito-container .carrito-contenido h4 {
+    font-size: 15px; }
+  .carrito-container .carrito-contenido p {
+    margin-bottom: 8px;
+    font-size: 15px; }
   .carrito-container .carrito-contenido .eliminar-producto {
-    color: red; }
+    color: red;
+    font-size: 15px;
+    margin-bottom: 8px; }
+
+.sumar {
+  cursor: pointer;
+  font-size: 30px;
+  align-items: center;
+  margin-bottom: 8px; }
+
+.restar {
+  cursor: pointer;
+  font-size: 30px;
+  margin-bottom: 8px; }
 
 .carrito-container div img {
   height: 120px;
@@ -99,6 +128,9 @@ header .nav-bar-carrito .nav-bar .ver-carrito {
   padding: 20px;
   text-align: center;
   padding-top: 20px; }
+
+.swal2-container .swal2-popup .swal2-confirm {
+  background-color: red; }
 
 div .boton {
   border: none; }
