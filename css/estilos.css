@@ -117,7 +117,7 @@ header .nav-bar-carrito .nav-bar .ver-carrito {
   margin-bottom: 8px; }
 
 .carrito-container div img {
-  height: 120px;
+  height: 180px;
   width: 120px; }
 
 .eliminar-producto {
@@ -166,7 +166,7 @@ div .boton {
       padding: 10px; }
     .camisetas .camisetas-contenedor div h4 {
       margin: 0px;
-      color: red;
+      color: black;
       width: 100%;
       padding: 0px; }
     .camisetas .camisetas-contenedor div .boton {
@@ -181,6 +181,19 @@ div .boton {
       transition: 0.5s; }
       .camisetas .camisetas-contenedor div .boton:hover {
         color: red; }
+
+.btn-pagar {
+  color: white;
+  background-color: red;
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 10%;
+  border: black;
+  cursor: pointer;
+  transition: 0.5s; }
+  .btn-pagar:hover {
+    background-color: #bd0000; }
 
 .grid-contenedor {
   color: black;

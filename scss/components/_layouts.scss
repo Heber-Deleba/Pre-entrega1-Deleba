@@ -90,6 +90,7 @@
             font-size: 15px;
             margin-bottom: 8px;
         }
+        
     }
 }
 
@@ -108,7 +109,7 @@
 .carrito-container{
     div{
         img{
-            height: 120px;
+            height: 180px;
             width: 120px;
         }
     }
@@ -185,7 +186,7 @@ div{
             }
             h4{
                 margin: 0px;
-                color:$color-terciario;
+                color:black;
                 width: 100%;
                 padding: 0px;
             }
@@ -204,6 +205,23 @@ div{
                 }
             }
         }
+    }
+}
+
+
+
+.btn-pagar{
+    color: white;
+    background-color: red;
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 10%;
+    border: black;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+        background-color:rgb(189, 0, 0);
     }
 }
 
