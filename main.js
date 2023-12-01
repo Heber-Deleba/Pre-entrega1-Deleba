@@ -150,6 +150,8 @@ carrito.forEach((modelos) => {
 
 //SweetAlert eliminar producto
         Swal.fire("Producto Eliminado!");
+
+
     });
     
 });
@@ -175,8 +177,62 @@ carrito.forEach((modelos) => {
 
     carritoContainer.append (btnPagar);
 
+
+    const sweetPagar = document.querySelector (".btn-pagar");
+    sweetPagar.addEventListener ("click", () => {
+        //verificar si hay productos en el carrito
+        if (carrito.length > 0) {
+        Swal.fire({
+            title: "Desea confirmar el pago?",
+            text: "Si la respuesta es negativa oprima Cancelar!",
+            icon: "warning",
+            iconColor: "#ff0000",
+            showCancelButton: true,
+            confirmButtonColor: "#000000",
+            cancelButtonColor: "#ff0000",
+            confirmButtonText: "Si, Pagar!",
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+            Swal.fire({
+                title: "Felicitaciones!",
+                text: "su compra ha sido realizada con exito.",
+                icon: "success",
+                iconColor: "#ff0000"
+            }).then(() => {
+                vaciarCarrito(); 
+            });
+            }
+        });
+    } else {
+        // Si no hay productos en el carrito, mostrar un mensaje informativo
+        Swal.fire({
+            title: "Carrito vacío",
+            text: "Agrega productos al carrito antes de realizar el pago.",
+            icon: "info",
+            iconColor: "#ff0000"
+        });
+    }
+
+
+        const confirmarPago = document.querySelector (".swal2-confirm");
+        confirmarPago.addEventListener ("click", () =>{
+            carritoContainer.style.display = "none"
+        })
+    });
+
+    estructuraCarrito.append (confirmarPago);
+
+
+    
+
+    
     
 };
+
+
+
+
 
 
 
@@ -196,6 +252,8 @@ carrito.forEach((modelos) => {
         carrito = carrito.filter ((carritoId) => {
             return carritoId !== foundId;
         });
+
+        
 
     guardado();
     carritoCounter();
@@ -231,7 +289,8 @@ carrito.forEach((modelos) => {
     sweetAlert.addEventListener ("click", () =>{
         Swal.fire({
             position: "center",
-            icon: "success",
+            icon: "info",
+            iconColor: "#ff0000",
             title: "Agregado al Carrito",
             showConfirmButton: false,
             timer: 900,
@@ -240,11 +299,17 @@ carrito.forEach((modelos) => {
 
 
 
+//vaciar carrito al pagar
+    const vaciarCarrito = () => {
+        carrito = []; 
+        guardado(); 
+        carritoCounter(); 
+        pintarCarrito(); 
+    };
 
 
 
-
-
+    
 
 
 
@@ -276,6 +341,12 @@ carrito.forEach((modelos) => {
 
 //PRODUCTOS
 const camisetas = [
+
+const vaciarCarrito = carritoContainer.querySelector ("btn-pagar");
+        vaciarCarrito.addEventListener ("click", () =>{
+            eliminarProducto(modelos.id)
+        });
+
     {
         id: 1,
         nombre: "CAMISETA AC MILAN TITULAR '06",
